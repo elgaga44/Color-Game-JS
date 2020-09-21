@@ -1,0 +1,63 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  justify: center;
+  margin: auto;
+  font-family: Verdana;
+  max-width: 1000px;
+}
+
+.guesstitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #48A4CE;
+  height: 20%;
+  text-align: center;
+  color: white;
+}
+
+.rgb {
+  font-size: 150%;
+}
+
+.menu {
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.correct {
+color: white;
+}
+
+.correctBlack {
+color: black;
+}
+
+.rightnav {
+display: flex;
+
+}
+
+.menu h2 {
+  margin: 0 10px;
+}
+
+.game {
+  background: black;
+  height: 90%;
+}
+
+.box  {
+  width: 30%;
+  background: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 20px;
+}
