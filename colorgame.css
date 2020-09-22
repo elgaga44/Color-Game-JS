@@ -19,9 +19,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("background.png");
+  background: rgb(50, 50, 50, 0.9);
   background-size: cover;
-  background-color: white;
   border-radius: 30px;
   text-align: center;
   color: white;
@@ -72,6 +71,11 @@ button {
   color: white;
   border: none;
   border-radius: 30px;
+}
+
+.new {
+  background: rgb(131,58,180);
+  background: linear-gradient(131deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 
 .game {
