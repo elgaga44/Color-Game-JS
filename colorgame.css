@@ -3,61 +3,97 @@ body, html {
 }
 
 body {
-  justify: center;
-  margin: auto;
   font-family: Verdana;
-  max-width: 1000px;
+  background: url("background-2.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-.guesstitle {
+.container {
+  justify: center;
+  margin: auto;
+  max-width: 600px;
+}
+
+.guessBar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #48A4CE;
-  height: 20%;
+  background: url("background.png");
+  background-size: cover;
+  background-color: white;
+  border-radius: 30px;
   text-align: center;
   color: white;
+  line-height: 1.5;
+  margin: 1.66%;
+  padding: 3% 0;
 }
 
-.rgb {
-  font-size: 150%;
+h1 {
+  font-size: 130%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+H1 #rgb {
+  font-size: 1.5em;;
 }
 
 .menu {
-  height: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  padding: 1.66%;
 }
 
 .correct {
-color: white;
-}
-
-.correctBlack {
 color: black;
+justify-content: center;
+font-size: 130%;
+margin: 0px;
 }
 
-.rightnav {
-display: flex;
-
+.correct-right {
+color: green;
 }
 
-.menu h2 {
-  margin: 0 10px;
+.correct-wrong {
+color: red;
+}
+
+.navbar {
+  display: flex;
+}
+
+button {
+  font-size: 50%;
+  padding: 0 20px;
+  background-color: rgb(153, 153, 153, 0.5);
+  color: white;
+  border: none;
+  border-radius: 30px;
 }
 
 .game {
-  background: black;
-  height: 90%;
+  padding-top: 0px;
 }
 
-.box  {
-  width: 30%;
+.row1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.box {
   background: purple;
+  width: 30%;
   padding-bottom: 30%;
-  float: left;
   margin: 1.66%;
   border-radius: 20px;
 }

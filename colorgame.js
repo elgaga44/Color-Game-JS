@@ -23,6 +23,8 @@ var easy = document.querySelector(".easy");
 
 var hard = document.querySelector(".hard");
 
+var guessBar = document.querySelector(".guessBar");
+
 var gameover = false;
 
 // Random color to find
@@ -45,12 +47,21 @@ for (var i = 0; i < box.length; i++) {
       for (var i = 0; i < box.length; i++) {
         box[i].style.backgroundColor = rgb.textContent;
       }
-      correct.classList.add("correctBlack");
+      // "Correct!" appears
+      correct.textContent = "Correct!";
+      correct.classList.add("correct-right");
+      correct.classList.remove("correct-wrong");
+      // RGB turns right color
+      rgb.style.color = rgb.textContent;
+      // Game stops
       gameover = true;
     }
     // If wrong square, square does not change
     else if (!gameover) {
       this.style.backgroundColor = "black";
+      // "Try again!" appears
+      correct.textContent = "Try again!";
+      correct.classList.add("correct-wrong");
     }
   });
 }
@@ -69,8 +80,10 @@ newcolor.addEventListener ("click", function () {
       box[i].style.backgroundColor = colors[i];
 
       // Reset "Correct!"
-      correct.classList.remove("correctBlack");
-
+      correct.classList.remove("correct-right");
+      correct.classList.remove("correct-wrong");
+      correct.textContent = "";
+      rgb.style.color = "white";
       // Game over = false
       gameover = false;
 
