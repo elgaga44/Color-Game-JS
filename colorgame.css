@@ -9,13 +9,36 @@ body {
   background-size: cover;
 }
 
-.container {
+@media (max-device-width: 480px)
+{ .container {
+  justify: center;
+  margin: auto;
+}
+.guessBar {
+ height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: rgb(50, 50, 50, 0.9);
+ background-size: cover;
+ border-radius: 30px;
+ text-align: center;
+ color: white;
+ line-height: 1.5;
+ margin: 1.66%;
+ padding: 3% 0;
+}
+}
+
+
+@media (min-device-width: 480px)
+{ .container {
   justify: center;
   margin: auto;
   max-width: 600px;
 }
-
 .guessBar {
+  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +51,8 @@ body {
   margin: 1.66%;
   padding: 3% 0;
 }
+}
+
 
 h1 {
   font-size: 130%;
@@ -43,6 +68,7 @@ H1 #rgb {
   justify-content: space-between;
   align-items: center;
   padding: 1.66%;
+  height: 7%;
 }
 
 .correct {
@@ -80,6 +106,7 @@ button {
 
 .game {
   padding-top: 0px;
+  height: 70%;
 }
 
 .row1 {
