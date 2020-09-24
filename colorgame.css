@@ -167,6 +167,8 @@ margin-top: 10px;
   display: none;
   font-size: 220%;
   margin-right: 70px;
+  margin-bottom: 0;
+  margin-top: 0;
   color: white;
   text-align: left;
   animation: 1s arrowMove infinite alternate ease-in-out;
