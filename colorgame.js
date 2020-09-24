@@ -1,32 +1,35 @@
 // Variables
+  var randomnumber = Math.floor(Math.random() * 250);
 
-var randomnumber = Math.floor(Math.random() * 250);
+  var numBoxes = 6;
 
-var numBoxes = 6;
+  var colors = generateRandomColors(numBoxes);
 
-var colors = generateRandomColors(numBoxes);
+  var pickedColor = pickColor();
 
-var pickedColor = pickColor();
+  var rgb = document.querySelector("#rgb");
 
-var rgb = document.querySelector("#rgb");
+  var box = document.querySelectorAll(".box");
 
-var box = document.querySelectorAll(".box");
+  var newcolor = document.querySelector(".new");
 
-var newcolor = document.querySelector(".new");
+  var newText = document.querySelector(".newText");
 
-var newText = document.querySelector(".newText");
+  var correct = document.querySelector(".correct");
 
-var correct = document.querySelector(".correct");
+  var easy = document.querySelector(".easy");
 
-var easy = document.querySelector(".easy");
+  var hard = document.querySelector(".hard");
 
-var hard = document.querySelector(".hard");
+  var guessBar = document.querySelector(".guessBar");
 
-var guessBar = document.querySelector(".guessBar");
+  var gameover = false;
 
-var gameover = false;
+  var yeah = new Audio("yeah.mp3");
 
-// Hard mode by default
+  var arrow = document.querySelector("#arrow");
+
+// Easy mode by default
 hard.classList.add("hardActive")
 
 // Easy mode
@@ -53,6 +56,11 @@ easy.addEventListener ("click", function functionName() {
     correct.textContent = "";
     rgb.style.color = "white";
 
+    // Reset "New colors" button
+    newText.textContent = "NEW COLORS";
+    newcolor.classList.remove("newGame");
+    arrow.style.display = "none";
+
     gameover = false;
 });
 
@@ -76,6 +84,11 @@ hard.addEventListener ("click", function functionName() {
   correct.classList.remove("correct-wrong");
   correct.textContent = "";
   rgb.style.color = "white";
+
+  // Reset "New colors" button
+  newText.textContent = "NEW COLORS";
+  newcolor.classList.remove("newGame");
+  arrow.style.display = "none";
 
   gameover = false;
 });
@@ -102,11 +115,14 @@ for (var i = 0; i < box.length; i++) {
       correct.textContent = "Correct!";
       correct.classList.add("correct-right");
       correct.classList.remove("correct-wrong");
+      // Yeah sound effect
+      yeah.play();
       // RGB turns right color
       rgb.style.color = rgb.textContent;
       // "New game?" prompt
       newText.textContent = "NEW GAME?";
       newcolor.classList.add("newGame");
+      arrow.style.display = "block";
       // Game stops
       gameover = true;
     }
@@ -142,6 +158,7 @@ newcolor.addEventListener ("click", function () {
       // Reset "New colors" button
       newText.textContent = "NEW COLORS";
       newcolor.classList.remove("newGame");
+      arrow.style.display = "none";
 
       // Game over = false
       gameover = false;

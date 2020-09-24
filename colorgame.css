@@ -7,6 +7,13 @@ body {
   background: url("background-2.jpg");
   background-position: center;
   background-size: cover;
+  animation: animation 70s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -2000px;
+  }
 }
 
 @media (max-device-width: 480px)
@@ -44,6 +51,13 @@ h1 {
 
 H1 #rgb {
   font-size: 1.5em;;
+}
+.correct {
+transform: rotate(0deg);
+transition: 0.1s ease;
+color: black;
+font-size: 400%;
+margin-top: 100px;
 }
 }
 
@@ -86,6 +100,13 @@ H1 #rgb {
   font-size: 1.3em;
   text-align: center;
 }
+.correct {
+transform: rotate(0deg);
+transition: 0.1s ease;
+color: black;
+font-size: 130%;
+margin-top: 10px;
+}
 }
 
 .menu {
@@ -98,6 +119,7 @@ H1 #rgb {
 
 .easy {
   margin-right: 5px;
+  transition: 0.4s ease;
 }
 
 .easy:hover {
@@ -107,6 +129,10 @@ H1 #rgb {
 
 .easyActive {
   background: #30B170;
+}
+
+.hard {
+  transition: 0.4s ease;
 }
 
 .hard:hover {
@@ -121,7 +147,7 @@ H1 #rgb {
   width: 40%;
   background: rgb(131,58,180,0.2);
   background: linear-gradient(131deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-  transition: 0.2s ease;
+  transition: 0.5s ease;
 }
 
 .new:hover {
@@ -135,6 +161,20 @@ H1 #rgb {
 
 .newGame:hover {
   filter:opacity(0.9);
+}
+
+#arrow {
+  display: none;
+  font-size: 220%;
+  margin-right: 70px;
+  color: white;
+  text-align: left;
+  animation: 1s arrowMove infinite alternate ease-in-out;
+}
+
+@keyframes arrowMove {
+  from {transform:rotate(-8deg);}
+  to {transform:rotate(8deg);}
 }
 
 .game {
@@ -160,6 +200,7 @@ H1 #rgb {
   padding-bottom: 30%;
   margin: 1.66%;
   border-radius: 20px;
+  transition: 0.6s ease;
 }
 
 .footer {
@@ -168,16 +209,8 @@ H1 #rgb {
   justify-content: center;
 }
 
-.correct {
-transform: rotate(0deg);
-transition: 0.1s ease;
-color: black;
-font-size: 120%;
-margin: 0px;
-}
-
 .correct-right {
-transform: scale(1.5) rotate(-8deg);
+transform: scale(2) rotate(-8deg);
 color: #4bed91;
 }
 
