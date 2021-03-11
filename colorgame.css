@@ -1,0 +1,250 @@
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: Verdana;
+  background: url("assets/background-2.jpg");
+  background-position: center;
+  background-size: cover;
+  animation: animation 70s linear infinite;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.whole {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+@keyframes animation {
+  100% {
+    background-position: 0px -2000px;
+  }
+}
+
+@media (max-device-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .guessBar {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(50, 50, 50, 0.9);
+    background-size: cover;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+    margin: 1.66%;
+    padding: 3% 0;
+  }
+  button {
+    font-size: 120%;
+    padding: 0 50px;
+    background-color: rgb(153, 153, 153, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50px;
+  }
+
+  h1 {
+    font-size: 200%;
+    font-family: "Press Start 2P", cursive;
+  }
+
+  H1 #rgb {
+    font-size: 1.5em;
+  }
+
+  .footer {
+    bottom: -200px;
+  }
+
+  .correct {
+    transform: rotate(0deg);
+    transition: 0.1s ease;
+    color: black;
+    font-size: 400%;
+    margin-top: 100px;
+  }
+}
+
+@media (min-device-width: 480px) {
+  .container {
+    width: 400px;
+  }
+  .guessBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(50, 50, 50, 0.9);
+    background-size: cover;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    line-height: 2;
+    margin: 1.66%;
+    padding: 3% 0;
+  }
+
+  button {
+    font-size: 60%;
+    padding: 0 20px;
+    background-color: rgb(153, 153, 153, 0.5);
+    color: white;
+    border: none;
+    border-radius: 30px;
+  }
+
+  h1 {
+    font-size: 100%;
+    font-family: "Press Start 2P", cursive;
+  }
+
+  H1 #rgb {
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  .footer {
+    bottom: -70px;
+  }
+
+  .correct {
+    transform: rotate(0deg);
+    transition: 0.1s ease;
+    color: black;
+    font-size: 130%;
+    margin-top: 10px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.66%;
+  height: 7%;
+}
+
+.easy {
+  margin-right: 5px;
+  transition: 0.4s ease;
+}
+
+.easy:hover {
+  background-color: #30b170;
+  margin-right: 5px;
+}
+
+.easyActive {
+  background: #30b170;
+}
+
+.hard {
+  transition: 0.4s ease;
+}
+
+.hard:hover {
+  background: #f6176e;
+}
+
+.hardActive {
+  background: #f6176e;
+}
+
+.new {
+  width: 45%;
+  background: rgb(131, 58, 180, 0.2);
+  background: linear-gradient(
+    131deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  transition: 0.5s ease;
+}
+
+.new:hover {
+  filter: opacity(0.9);
+}
+
+.newGame {
+  background: #0093e9;
+  background: linear-gradient(135deg, #0093e9 0%, #80d0c7 100%);
+}
+
+.newGame:hover {
+  filter: opacity(0.9);
+}
+
+#arrow {
+  display: none;
+  font-size: 220%;
+  margin-right: 70px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: white;
+  text-align: left;
+  animation: 1s arrowMove infinite alternate ease-in-out;
+}
+
+@keyframes arrowMove {
+  from {
+    transform: rotate(-8deg);
+  }
+  to {
+    transform: rotate(8deg);
+  }
+}
+
+.game {
+  padding-top: 0px;
+  height: 70%;
+}
+
+.row1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.box {
+  background: purple;
+  width: 30%;
+  padding-bottom: 30%;
+  margin: 1.66%;
+  border-radius: 20px;
+  transition: 0.6s ease;
+}
+
+.footer {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.correct-right {
+  transform: scale(2) rotate(-8deg);
+  color: #4bed91;
+}
+
+.correct-wrong {
+  transform: scale(1.5);
+  color: #f6176e;
+}
