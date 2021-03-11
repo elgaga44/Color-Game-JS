@@ -25,11 +25,17 @@
 
   var gameover = false;
 
+<<<<<<< HEAD
+  var yeah = new Audio("assets/yeah.mp3");
+
+// Hard mode by default
+=======
   var yeah = new Audio("yeah.mp3");
 
   var arrow = document.querySelector("#arrow");
 
 // Easy mode by default
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 hard.classList.add("hardActive")
 
 // Easy mode
@@ -59,7 +65,10 @@ easy.addEventListener ("click", function functionName() {
     // Reset "New colors" button
     newText.textContent = "NEW COLORS";
     newcolor.classList.remove("newGame");
+<<<<<<< HEAD
+=======
     arrow.style.display = "none";
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 
     gameover = false;
 });
@@ -88,7 +97,10 @@ hard.addEventListener ("click", function functionName() {
   // Reset "New colors" button
   newText.textContent = "NEW COLORS";
   newcolor.classList.remove("newGame");
+<<<<<<< HEAD
+=======
   arrow.style.display = "none";
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 
   gameover = false;
 });
@@ -106,6 +118,10 @@ for (var i = 0; i < box.length; i++) {
 
   // Change color when clicking on squares
   box[i].addEventListener ("click", function () {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
     // If right square, squares turn same color
     if (this.style.backgroundColor == rgb.textContent) {
       for (var i = 0; i < box.length; i++) {
@@ -122,10 +138,18 @@ for (var i = 0; i < box.length; i++) {
       // "New game?" prompt
       newText.textContent = "NEW GAME?";
       newcolor.classList.add("newGame");
+<<<<<<< HEAD
+
+      // Game stops
+      gameover = true;
+    }
+
+=======
       arrow.style.display = "block";
       // Game stops
       gameover = true;
     }
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
     // If wrong square, square disappears
     else if (!gameover) {
       this.style.backgroundColor = "black";
@@ -139,6 +163,31 @@ for (var i = 0; i < box.length; i++) {
 // 3. Set new game
 newcolor.addEventListener ("click", function () {
 
+<<<<<<< HEAD
+    // Give new colors to squares
+    colors = generateRandomColors(numBoxes);
+    for (var i = 0; i < box.length; i++) {
+    box[i].style.backgroundColor = colors[i];
+    }
+
+    // Give new color to find
+    pickedColor = pickColor();
+    rgb.textContent = pickedColor;
+
+    // Reset "Correct!"
+    correct.classList.remove("correct-right");
+    correct.classList.remove("correct-wrong");
+    correct.textContent = "";
+    rgb.style.color = "white";
+
+    // Reset "New colors" button
+    newText.textContent = "NEW COLORS";
+    newcolor.classList.remove("newGame");
+
+    // Game over = false
+    gameover = false;
+});
+=======
       // Give new colors to squares
       colors = generateRandomColors(numBoxes);
       for (var i = 0; i < box.length; i++) {
@@ -163,6 +212,7 @@ newcolor.addEventListener ("click", function () {
       // Game over = false
       gameover = false;
   });
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 
 // Function: pick the color to guess
 function pickColor() {
