@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 html {
   height: 100vh;
+=======
+body, html {
+  height: 100%;
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 }
 
 body {
   font-family: Verdana;
+<<<<<<< HEAD
   background: url("assets/background-2.jpg");
   background-position: center;
   background-size: cover;
@@ -94,6 +100,85 @@ body {
     margin: 1.66%;
     padding: 3% 0;
   }
+=======
+  background: url("background-2.jpg");
+  background-position: center;
+  background-size: cover;
+  animation: animation 70s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -2000px;
+  }
+}
+
+@media (max-device-width: 480px)
+{ .container {
+  justify: center;
+  margin: auto;
+}
+.guessBar {
+ height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: rgb(50, 50, 50, 0.9);
+ background-size: cover;
+ border-radius: 30px;
+ text-align: center;
+ color: white;
+ line-height: 1.5;
+ margin: 1.66%;
+ padding: 3% 0;
+}
+ button {
+   font-size: 150%;
+   padding: 0 50px;
+   background-color: rgb(153, 153, 153, 0.5);
+   color: white;
+   border: none;
+   border-radius: 50px;
+}
+
+h1 {
+  font-size: 220%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+H1 #rgb {
+  font-size: 1.5em;;
+}
+.correct {
+transform: rotate(0deg);
+transition: 0.1s ease;
+color: black;
+font-size: 400%;
+margin-top: 100px;
+}
+}
+
+
+@media (min-device-width: 480px)
+{ .container {
+  justify: center;
+  margin: auto;
+  max-width: 500px;
+}
+.guessBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(50, 50, 50, 0.9);
+  background-size: cover;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  line-height: 2;
+  margin: 1.66%;
+  padding: 3% 0;
+}
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 
   button {
     font-size: 60%;
@@ -102,6 +187,7 @@ body {
     color: white;
     border: none;
     border-radius: 30px;
+<<<<<<< HEAD
   }
 
   h1 {
@@ -125,6 +211,26 @@ body {
     font-size: 130%;
     margin-top: 10px;
   }
+=======
+}
+
+h1 {
+  font-size: 100%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+H1 #rgb {
+  font-size: 1.3em;
+  text-align: center;
+}
+.correct {
+transform: rotate(0deg);
+transition: 0.1s ease;
+color: black;
+font-size: 130%;
+margin-top: 10px;
+}
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 }
 
 .menu {
@@ -141,12 +247,20 @@ body {
 }
 
 .easy:hover {
+<<<<<<< HEAD
   background-color: #30b170;
+=======
+  background-color: #30B170;
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
   margin-right: 5px;
 }
 
 .easyActive {
+<<<<<<< HEAD
   background: #30b170;
+=======
+  background: #30B170;
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 }
 
 .hard {
@@ -154,6 +268,7 @@ body {
 }
 
 .hard:hover {
+<<<<<<< HEAD
   background: #f6176e;
 }
 
@@ -170,10 +285,24 @@ body {
     rgba(253, 29, 29, 1) 50%,
     rgba(252, 176, 69, 1) 100%
   );
+=======
+  background: #F6176E;
+}
+
+.hardActive {
+  background: #F6176E;
+}
+
+.new {
+  width: 40%;
+  background: rgb(131,58,180,0.2);
+  background: linear-gradient(131deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
   transition: 0.5s ease;
 }
 
 .new:hover {
+<<<<<<< HEAD
   filter: opacity(0.9);
 }
 
@@ -184,6 +313,18 @@ body {
 
 .newGame:hover {
   filter: opacity(0.9);
+=======
+  filter:opacity(0.9);
+}
+
+.newGame {
+  background: #0093E9;
+  background: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.newGame:hover {
+  filter:opacity(0.9);
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 }
 
 #arrow {
@@ -198,12 +339,17 @@ body {
 }
 
 @keyframes arrowMove {
+<<<<<<< HEAD
   from {
     transform: rotate(-8deg);
   }
   to {
     transform: rotate(8deg);
   }
+=======
+  from {transform:rotate(-8deg);}
+  to {transform:rotate(8deg);}
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 }
 
 .game {
@@ -236,6 +382,7 @@ body {
   margin-top: 2%;
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   position: absolute;
 }
 
@@ -247,4 +394,16 @@ body {
 .correct-wrong {
   transform: scale(1.5);
   color: #f6176e;
+=======
+}
+
+.correct-right {
+transform: scale(2) rotate(-8deg);
+color: #4bed91;
+}
+
+.correct-wrong {
+transform: scale(1.5);
+color: #F6176E;
+>>>>>>> 68f74bd7e47dc177b73949d23cd792a7fc2b8349
 }
